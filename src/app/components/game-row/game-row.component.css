@@ -1,0 +1,9 @@
+.test{
+    border-width: 1px;
+    border-style: solid;
+    border-color: magenta;
+}
+
+.carousel{
+    height: 240px;
+}
