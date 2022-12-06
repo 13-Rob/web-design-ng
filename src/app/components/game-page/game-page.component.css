@@ -19,12 +19,20 @@
     height: 300px!important;
 }
 
+.carousel-slider{
+    padding: 20px;
+}
+
 .cover{
     border-radius: 20px;
 }
 
 .game{
     padding: 0;
+}
+
+.game-row{
+    margin: 50px;
 }
 
 .grade{
@@ -42,8 +50,24 @@
     background-color: rgb(217, 246, 243);
 }
 
+.video-container {
+    position: relative;
+    padding-bottom: calc(var(--aspect-ratio, .5625) * 66%);
+    height: 0;
+    width: 100%;
+  }
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 div{
     padding: 0;
+    height: auto;
 }
 
 h3{
@@ -52,7 +76,7 @@ h3{
 }
 
 h4{
-    font-weight: bold;
+    font-weight: 850;
 }
 
 img{

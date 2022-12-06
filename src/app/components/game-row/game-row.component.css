@@ -5,8 +5,18 @@
 }
 
 .carousel{
-    height: 200px;
+    height: 250px;
     margin: 10px;
+}
+
+.carousel-item{
+    height: 250px;
+}
+
+.cover{
+    padding: 10px;
+    height: 200px;
+    width: 100px;
 }
 
 h5{
@@ -15,4 +25,9 @@ h5{
     font-weight: bold;
     text-indent: 50px;
     margin: 0;
+}
+
+img{
+    padding-left: 20px;
+    height: 250px!important;
 }

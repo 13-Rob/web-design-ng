@@ -1,9 +1,8 @@
-<div class="row news">
-    <div class="col s4 valign-wrapper">
-        <a href="#one!"><img src="https://picsum.photos/80/80"></a>
+<div class="row news" *ngFor="let newsA of newsService.news">
+    <div class="col s5">
+        <img class="valign-wrapper" src="{{newsA.image}}">
     </div>
-    <div class="col s8">
-        <h6>New's title</h6>
-        <p class="truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, illum optio provident ratione ullam quam reiciendis a modi libero dolore quos, facilis itaque.</p>
+    <div class="col s7">
+        <h6>{{newsA.title}}</h6>
     </div>
 </div>
