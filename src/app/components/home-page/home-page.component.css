@@ -1,3 +1,9 @@
+.news{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(217, 246, 243);
+}
+
 .row{
     margin: 0;
 }
@@ -8,10 +14,3 @@
     border-color: magenta;
 }
 
-#games{
-    background-color: #D9D9D9;
-}
-
-#news{
-    background-color: #888;
-}

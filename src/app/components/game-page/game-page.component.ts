@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import * as M from "materialize-css";
+
 @Component({
-  selector: 'app-game-row',
-  templateUrl: './game-row.component.html',
-  styleUrls: ['./game-row.component.css']
+  selector: 'app-game-page',
+  templateUrl: './game-page.component.html',
+  styleUrls: ['./game-page.component.css']
 })
-export class GameRowComponent implements OnInit {
+export class GamePageComponent implements OnInit {
 
   constructor() { }
 
@@ -13,9 +13,8 @@ export class GameRowComponent implements OnInit {
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.carousel');
       var instances = M.Carousel.init(elems, {
-        dist:0,
-        numVisible:5,
-        padding: 10
+        fullWidth: true,
+        indicators: true
       });
     });
   }

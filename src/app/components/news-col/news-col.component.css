@@ -3,3 +3,13 @@
     border-style: solid;
     border-color: magenta;
 }
+
+.row{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+h6{
+    font-weight: bold;
+}

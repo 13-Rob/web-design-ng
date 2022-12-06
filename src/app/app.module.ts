@@ -9,6 +9,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { GameRowComponent } from './components/game-row/game-row.component';
 import { NewsColComponent } from './components/news-col/news-col.component';
+import { SearchResultComponent } from './components/search-result/search-result.component';
+import { GameCardComponent } from './components/game-card/game-card.component';
+import { GamePageComponent } from './components/game-page/game-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { NewsColComponent } from './components/news-col/news-col.component';
     SignUpComponent,
     HomePageComponent,
     GameRowComponent,
-    NewsColComponent
+    NewsColComponent,
+    SearchResultComponent,
+    GameCardComponent,
+    GamePageComponent
   ],
   imports: [
     BrowserModule,
