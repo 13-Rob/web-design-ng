@@ -3,10 +3,10 @@
     <div class="row col s6 push-s1 game">
         <div class="col s4 center-align cover">
             <img class="cover" src="{{game[0].coverURL}}">
-            <a class="waves-effect waves-light btn-small button"><i class="material-icons left">create</i>write review</a>
+            <a class="waves-effect waves-light btn-small button truncate"  id="review-btn" onclick="">write review</a>
         </div>
 
-        <div class="col s6">
+        <div class="col s6 title">
             <h3>{{game[0].title}}</h3>
         </div>
         <div class="col s2 right grade">
@@ -17,12 +17,23 @@
             <iframe src="https://www.youtube.com/embed/MmB9b5njVbA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <div class="col s12 game-row">
-            <app-game-row></app-game-row>
+        <div class="col s12 game-row d-container">
+            <p class="description">{{game[0].description}}</p>
+        </div>
+        <div class="col s12 game-row d-container">
+            <p class="reviews">Reviews</p>
+            <div class="row review" *ngFor="let review of reviewsService.review">
+                <p class="col s9 review-title">{{review.title}}</p>
+                <p class="col s3 score right-align">{{review.score}}</p>
+                <p class="col s12 content">{{review.reviewC}}</p>
+                <p class="col s12 author right-align">Written by {{review.author}}</p>
+            </div>
         </div>
     </div>
 
     <div class="col s3 push-s2 news">
         <app-news-col></app-news-col>
     </div>
+
+    <app-review-editor id="review-editor" [game]="game[0]"></app-review-editor>
 </div>

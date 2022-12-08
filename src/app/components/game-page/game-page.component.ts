@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GamesService } from '../../services/games.service';
+import { ReviewsService } from 'src/app/services/reviews.service';
 
 @Component({
   selector: 'app-game-page',
@@ -11,8 +12,8 @@ import { GamesService } from '../../services/games.service';
 export class GamePageComponent implements OnInit {
   title: any;
   game: any;
-  color: any;
-  constructor(public gamesService: GamesService, private activatedRoute: ActivatedRoute) { }
+  created: any;
+  constructor(public gamesService: GamesService, public reviewsService: ReviewsService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params =>
@@ -20,12 +21,36 @@ export class GamePageComponent implements OnInit {
     );
 
     this.getGameInfo();
+    this.getReviews();
+
+    const btn = document.getElementById('review-btn');
+    const el = document.getElementById('review-editor');
+
+    if (btn != null && el != null)
+    {
+      btn.addEventListener('click', function handleClick(){
+        el.style.display = "block";
+        btn.classList.add("disabled");
+      });
+    }
   }
 
   getGameInfo(){
     this.gamesService.getGameInfo(this.title).subscribe(
       res => {
         this.game = res;
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
+  getReviews(){
+    this.reviewsService.getGameReviews(this.title).subscribe(
+      res => {
+        this.reviewsService.review = res;
+        console.log(this.reviewsService.review);
       },
       err => {
         console.log(err);

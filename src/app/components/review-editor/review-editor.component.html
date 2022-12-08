@@ -1,0 +1,21 @@
+<div class="review z-depth-4">
+    <h5 class="center"><i class="material-icons center" type="submit">create</i></h5>
+    <form class="review-form" #reviewform="ngForm" (ngSubmit)="reviewbox(reviewform)">
+      <div class="input-field col s8">
+        <input id="title" type="text" class="validate" [ngModel]="reviews.title" name="title">
+        <label for="title">Review Title</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="score" type="number" class="validate" max="5" min="0" [ngModel]="reviews.score" name="score"><label for="score">Score</label>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="reviewC" class="materialize-textarea" [ngModel]="reviews.reviewC" name="reviewC"></textarea>
+          <label for="reviewC">Content</label>
+        </div>
+      </div>
+      <div class="row review-btn">
+        <button class="waves-effect btn-small button col s4 push-s4 center-align" id="submit-btn" [ngModel]="reviews">Submit</button>
+      </div>
+    </form>
+</div>

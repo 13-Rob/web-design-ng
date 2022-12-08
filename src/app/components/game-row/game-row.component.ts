@@ -1,5 +1,4 @@
-import { Component, OnInit , AfterViewInit} from '@angular/core';
-import * as M from "materialize-css";
+import { Component, OnInit} from '@angular/core';
 import { GamesService } from '../../services/games.service';
 
 @Component({
@@ -7,23 +6,12 @@ import { GamesService } from '../../services/games.service';
   templateUrl: './game-row.component.html',
   styleUrls: ['./game-row.component.css']
 })
-export class GameRowComponent implements OnInit, AfterViewInit {
+export class GameRowComponent implements OnInit {
 
   constructor(public gamesService: GamesService) { }
 
   ngOnInit(): void {
     this.getGames();
-  }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      var elems = document.querySelectorAll('.carousel');
-      var instances = M.Carousel.init(elems, {
-        dist:0,
-        numVisible:5,
-        padding: 10
-      });
-    }), 100;
   }
 
   getGames(){

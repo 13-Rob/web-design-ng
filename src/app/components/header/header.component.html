@@ -2,19 +2,24 @@
     <div class="col s1 push-s1 titles">
       <a href="/">Logo</a>
     </div>
-    <div class="col s4 push-s1 titles" id="search">
-      Search
-    </div>
-    <div class="col s1 push-s2 titles right-align left">
+    <form class="col s5 push-s1" #searchform="ngForm" (ngSubmit)="searchbox(searchform)">
+      <div class="col s10 titles valign-wrapper">
+        <input id="search" class="col s12" placeholder="Search" name="search" [(ngModel)]="search">
+      </div>
+      <div class="col s2 valign-wrapper">
+        <button class="waves-effect btn-small button" routerLink="/games/{{search}}"><i class="material-icons center" type="submit">search</i></button>
+      </div>
+    </form>
+    <div class="col s1 push-s1 titles right-align left">
      <a href="/news">News</a>
     </div>
-    <div class="col s1 push-s2 titles right-align left">
+    <div class="col s1 push-s1 titles right-align left">
       <a href="/games">Games</a>
     </div>
-    <div class="col s1 push-s2 titles right-align left">
+    <div class="col s1 push-s1 titles right-align left">
       <a href="/about">About</a>
     </div>
-    <div class="col s1 push-s2 titles right-align left">
+    <div class="col s1 push-s1 titles right-align left">
       <a href="/login">Log In</a>
     </div>
 </div>

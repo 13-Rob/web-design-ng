@@ -1,0 +1,40 @@
+.test{
+    border-width: 1px;
+    border-style: solid;
+    border-color: magenta;
+}
+.input-field{
+    margin-bottom: 0px;
+}
+
+.review{
+    position:absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -160px;
+    z-index: 100px;
+    background-color: rgb(255, 255, 255);
+    width: 320px;
+    height: 400px;
+    border-radius: 1px;
+}
+
+.review-form{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#content{
+    min-height: 80px;
+}
+
+h5{
+    background-color: #009688;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+i{
+    font-size: 40px;
+    color: rgb(217, 246, 243);
+}
